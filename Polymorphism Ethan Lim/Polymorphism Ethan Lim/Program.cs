@@ -19,7 +19,7 @@ namespace Polymorphism_Ethan_Lim
             person.Age();
             Console.WriteLine("Onto students");
             Student student = new Student("E", "D", "11/03/1991", "S","5th");
-            //Console.WriteLine(student.date_of_birth);
+     
            
             student.Screen_Name();
             Console.ReadKey();

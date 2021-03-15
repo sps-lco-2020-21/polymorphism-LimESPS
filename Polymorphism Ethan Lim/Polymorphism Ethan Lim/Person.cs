@@ -133,18 +133,20 @@ namespace Polymorphism_Ethan_Lim
       
         public override string Screen_Name()
         {
-            return base.Screen_Name()+year_group;
+            return base.Screen_Name()+$" year group is: {year_group}";
         }
     }
     class Teacher : Person
     {
-        public Teacher(string f, string l, string dob, string e) : base(f,l,dob,e)
+        string subject;
+        public Teacher(string f, string l, string dob, string e, string s) : base(f,l,dob,e)
         {
-
+            subject = s;
         }
-        new void subject()
+        public override string Screen_Name()
         {
-
+            return base.Screen_Name()+ $"Member of staff {subject}";
         }
+       
     }
 }
