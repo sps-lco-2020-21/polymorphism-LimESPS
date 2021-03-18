@@ -13,15 +13,15 @@ namespace VirtualNewOverride
             // Step 1 create the instances of the objects 
             BaseClass bc = new BaseClass();
             DerivedClass dc = new DerivedClass();
-
+            //protected accessible within any class that is derived form it
             // this is the one that's going to mess with your heads. 
             BaseClass bcdc = new DerivedClass();
-
+            //internal, accessible within an interface
 
             Console.WriteLine("bc 1/2");
             bc.Method1();
             bc.Method2();
-
+            bc.EthanT();
             Console.WriteLine("\ndc 1/2");
             dc.Method1();
             dc.Method2();
@@ -56,11 +56,17 @@ namespace VirtualNewOverride
 
             Console.ReadKey();
         }
-
+        public class test
+        {
+            public void EthanT()
+            {
+                Console.WriteLine("Works");
+            }
+        }
         /// <summary>
         /// A base class which implements 2 functions 
         /// </summary>
-        class BaseClass
+        class BaseClass : test //base class is derived from test
         {
             #region 5 virtual 
             // step 5 - what effect does the virtual keyword have? 
